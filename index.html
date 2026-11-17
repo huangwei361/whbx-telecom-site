@@ -206,6 +206,7 @@ input,textarea,select{font:inherit}
 .ftr ul a:hover{color:var(--accent2)}
 .ftr-brand p{font-size:13.5px;margin:14px 0 0;max-width:34em;line-height:1.75}
 .ftr-bot{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px}
+.ftr-note{margin:14px 0 0;font-size:11.5px;color:rgba(255,255,255,.34);line-height:1.6}
 
 /* SECTION: lightbox */
 .lb{position:fixed;inset:0;z-index:200;background:rgba(4,12,22,.93);display:none;align-items:center;justify-content:center;padding:26px}
@@ -349,7 +350,6 @@ input,textarea,select{font:inherit}
   <div class="wrap about">
     <div class="about-img rv" id="about-img-box">
       <img id="about-img" alt="通信工程团队在钢铁厂区现场作业" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-      <span class="ai-tag" style="bottom:auto;top:12px;right:12px">AI 示意图</span>
       <div class="about-badge">
         <b>现场即战场</b>
         <span>工程师常驻厂区，从方案设计到竣工验收全程跟进</span>
@@ -448,6 +448,7 @@ input,textarea,select{font:inherit}
       <span>© 2026 武汉钢联通信事业部</span>
       <span>工程建设 · 系统维保 · 应急抢修 · 智慧消防 · AI 分析 · 5G 应用</span>
     </div>
+    <p class="ftr-note">本站部分场景配图由人工智能生成，仅用于业务示意，非真实现场照片。</p>
   </div>
 </footer>
 
@@ -682,7 +683,7 @@ bindImg(document.getElementById("about-img"),"team","通信工程团队在钢铁
     var card=document.createElement("article");
     card.className="bcard rv";
     card.style.transitionDelay=(i%4)*70+"ms";
-    card.innerHTML='<div class="bcard-img"><img class="mainimg" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><span class="bcard-no"></span><span class="ai-tag">AI 示意图</span></div><div class="bcard-body"><h3></h3><p></p><div class="bcard-meta"><span></span></div></div>';
+    card.innerHTML='<div class="bcard-img"><img class="mainimg" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><span class="bcard-no"></span></div><div class="bcard-body"><h3></h3><p></p><div class="bcard-meta"><span></span></div></div>';
     var im=card.querySelector("img.mainimg");
     bindImg(im,b.img,b.t+" 场景示意图（AI 生成）");
     im.dataset.cap=b.t;
